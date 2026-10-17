@@ -2,6 +2,10 @@
 
 A small banking-management project implemented in 8086 assembly, with a browser-based interface for trying the banking workflows interactively.
 
+## Live demo
+
+Open the deployed app at [cse-341-banking-demo.vercel.app](https://cse-341-banking-demo.vercel.app/).
+
 ## Run the browser app
 
 No package installation or build step is required. From the project folder, start a local static web server:
