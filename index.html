@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <meta name="description" content="A local, interactive banking management system demo.">
+    <title>Banking System | CSE 341</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="banking.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Main navigation">
+            <a class="brand" href="#" data-view="dashboard" aria-label="Banking System home">
+                <span class="brand-icon" aria-hidden="true">B</span>
+                <span><strong>pocket</strong><small>Banking system</small></span>
+            </a>
+            <p class="nav-label">WORKSPACE</p>
+            <nav class="nav-list">
+                <button class="nav-link is-active" data-view="dashboard"><span class="nav-icon">⌂</span> Overview</button>
+                <button class="nav-link" data-view="accounts"><span class="nav-icon">▤</span> Accounts</button>
+                <button class="nav-link" data-view="activity"><span class="nav-icon">↗</span> Transactions</button>
+                <button class="nav-link" data-view="statements"><span class="nav-icon">▧</span> Statements</button>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="demo-card">
+                    <span class="demo-dot"></span>
+                    <div><strong>Local demo</strong><small>Your data stays in this browser</small></div>
+                </div>
+                <a class="docs-link" href="BANKING_SYSTEM_DOCUMENTATION.md">Assembly project documentation <span aria-hidden="true">↗</span></a>
+            </div>
+        </aside>
+
+        <main class="main-area">
+            <header class="topbar">
+                <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-slash">/</span><strong id="page-label">Overview</strong></div>
+                <div class="topbar-actions">
+                    <span class="demo-badge"><span class="demo-dot"></span> DEMO MODE</span>
+                    <button class="button button-primary button-small" data-action="create-account"><span aria-hidden="true">＋</span> New account</button>
+                </div>
+            </header>
+            <div id="app" class="page-content" aria-live="polite"></div>
+        </main>
+    </div>
+    <dialog id="action-dialog" class="action-dialog" aria-labelledby="dialog-title">
+        <form id="dialog-form" method="dialog">
+            <div id="dialog-content"></div>
+        </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
